@@ -5,7 +5,8 @@ the original paper: [Deeper depth prediction with fully convolutional residual n
 
 the original implementation :https://github.com/iro-cp/FCRN-DepthPrediction.git .
 
-## requirements
+## Requirements
+### Environment
 ```
 python==3.6.12
 torch==1.7.0
@@ -15,7 +16,13 @@ scipy==1.2.1
 
 
 ```
-## datasets
+### Datasets
 **NYU depth V2**
 
-Download the [NYU Depth Dataset V2 Labelled Dataset](http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat)  and put it into  **rawdata** folder .
+Download the [NYU Depth Dataset V2 Labelled Dataset](http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat)  and put it into  **rawdata**  folder where **split.mat** locates .
+
+Then,
+```shell
+### split the dataset
+$ python create_nyu_h5.py  
+```
