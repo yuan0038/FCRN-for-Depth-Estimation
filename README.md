@@ -1,4 +1,4 @@
-# FCRN-for-Depth-Estimation
+# FCRN-for-Depth-Estimation(pytorch)
 A beginner in the CV field reruns FCRN for depth estimation...
 
 the original paper: [Deeper depth prediction with fully convolutional residual networks](https://arxiv.org/abs/1606.00373) .  
@@ -37,10 +37,13 @@ you can get the average metrics , the metirc of every img and colored imgs by ru
 ``` python main.py --evaluate results/xxx/xxx.pth.tar  ```
 
 ## results
-I downsample and center-crop the rgb and depth images into (228,304) pixels ,and the predictions of model are upsampled to (228,304) pixels to calculate loss and metrics while  they are upsampled to (480,640) pixels in authors' paper.   
-If you want to get better results, you can download (the dataset)[http://datasets.lids.mit.edu/sparse-to-dense/data/nyudepthv2.tar.gz] having 47036 training imgs  to replace the Labelled Dataset(795 training imgs).  
+I downsample and center-crop the rgb and depth images into (228,304) pixels ,and the predictions of model are upsampled to (228,304) pixels to calculate loss and metrics while  they are upsampled to (480,640) pixels in authors' paper.  (more details )[https://github.com/iro-cp/FCRN-DepthPrediction/issues/49]
+If you want to get better results, you can download (the dataset)[http://datasets.lids.mit.edu/sparse-to-dense/data/nyudepthv2.tar.gz] having 47,036 training imgs  to replace the Labelled Dataset(795 training imgs).  
 training on 795 imgs with learning rate 1e-5,30 epochs:
 
 |     |  rms  |  rel  | delta1 | delta2 | delta3 |
 |-----------------------------|:-----:|:-----:|:-----:|:-----:|:-----:|
 |author|0.573|  0.127|0.811| 0.953| 0.988|
+|795 training imgs|
+|47,036 training imgs|
+
