@@ -16,8 +16,8 @@ opencv-python==4.5.1.48
 Pillow==8.0.1
 ```
 ### NYU depth V2 Dataset
-Download [the dataset(32G)](http://datasets.lids.mit.edu/sparse-to-dense/data/nyudepthv2.tar.gz) having 47,036 training imgs and 654 test imgs then unzip it into '**Data**' folder .
-
+Create a folder  named **Data** under the project.  
+Download [the dataset(32G)](http://datasets.lids.mit.edu/sparse-to-dense/data/nyudepthv2.tar.gz) having 47,036 training imgs and 654 test imgs then unzip it into **Data** folder.
 ### pretrained model
 Download the pretrained backbone [resnet50](https://download.pytorch.org/models/resnet50-19c8e357.pth),and put it into the project directly.  
 <BR/>
