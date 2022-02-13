@@ -34,9 +34,9 @@ you can get the average metrics , the metirc of every img and colored imgs by ru
 ``` python main.py --evaluate results/xxx/xxx.pth.tar  ```
 
 ## results
-I downsample and center-crop the rgb and depth images into (228,304) pixels ,and the predictions of model are upsampled to (228,304) pixels to calculate loss and metrics while  they are upsampled to (480,640) pixels in authors' paper.  [more details](https://github.com/iro-cp/FCRN-DepthPrediction/issues/49)  
+I downsample and center-crop the rgb and depth images into (228,304) pixels ,and the predictions of model are upsampled to **(228,304)** pixels to calculate loss and metrics while  they are upsampled to **(480,640)** pixels in authors' paper.  [about this issue.](https://github.com/iro-cp/FCRN-DepthPrediction/issues/49)  
 
-some results  imgs with learning rate 1e-5,30 epochs:
+some results  imgs with learning rate 1e-5,5 epochs:
 
 
 |     |  rms  |  rel  | delta1 | delta2 | delta3 |
