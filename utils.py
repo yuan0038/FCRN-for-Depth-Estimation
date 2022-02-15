@@ -79,7 +79,7 @@ def save_checkpoint(state, is_best, epoch, output_directory):
     #     prev_checkpoint_filename = os.path.join(output_directory, 'checkpoint-' + str(epoch-1) + '.pth.tar')
     #     if os.path.exists(prev_checkpoint_filename):
     #         os.remove(prev_checkpoint_filename)
-class Val_imgs_metrics_Saver():
+class Val_imgs_metrics_Saver:
     def __init__(self,output_directory,fieldnames):
         csv_name='val_imgs_metric.csv'
         self.saver_csv=os.path.join(output_directory,csv_name)
@@ -95,7 +95,7 @@ class Val_imgs_metrics_Saver():
                              'mae': results.mae, 'delta1': results.delta1, 'delta2': results.delta2, 'delta3': results.delta3,
                              })
 
-class Progrecess_bar():
+class Progrecess_bar:
     def __init__(self,datalen,title='progress'):
         self.datalen=datalen
         self.title=title
