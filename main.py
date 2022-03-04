@@ -82,7 +82,7 @@ def train(train_loader,model,loss_fn,optimizer,epoch):
           '{average.absrel:.3f}\t'
           '{average.lg10:.3f}\t'
           .format(average=avg))
-    avg = average_meter.average()
+    
     with open(train_csv, 'a') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow({'mse': avg.mse, 'rmse': avg.rmse, 'absrel': avg.absrel, 'lg10': avg.lg10,
